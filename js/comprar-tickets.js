@@ -50,7 +50,24 @@ function calcularMonto() {
 
 
 
+btnResumen.addEventListener("click", validar);
+function validar() {
+if(nombre.value === null || nombre.value === "" ){
+alert("Ingresa un nombre");
+return false;
+}
+if(apellido.value === null || apellido.value === "" ){
+ alert("Ingresa un Apellido");
+ return false; }
 
 
+ if(nombre.value.length > 30){
+    alert("Ingrese un nombre mas corto");
+    return false; }
+ if(apellido.value.length > 30){
+    alert("Ingrese un Apellido mas corto");
+    return false; }
 
+const emailValido = (mail) => {return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);};
 
+}
